@@ -1,0 +1,103 @@
+#! /usr/local/iverilog/bin/vvp
+:ivl_version "11.0 (devel)" "(s20150603-642-g3bdb50da)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "vhdl_textio";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00000000009ecc80 .scope module, "tabla_1_POS" "tabla_1_POS" 2 7;
+ .timescale 0 0;
+L_00000000009e7590 .functor NOT 1, v00000000009e7f00_0, C4<0>, C4<0>, C4<0>;
+L_00000000009ead20 .functor NOT 1, v00000000009ece10_0, C4<0>, C4<0>, C4<0>;
+L_00000000009eae40 .functor NOT 1, v0000000000873560_0, C4<0>, C4<0>, C4<0>;
+L_0000000000873920 .functor OR 1, v00000000009e7f00_0, v00000000009ece10_0, L_00000000009eae40, C4<0>;
+L_0000000000873990 .functor OR 1, v00000000009e7f00_0, L_00000000009ead20, L_00000000009eae40, C4<0>;
+L_0000000000873a00 .functor OR 1, L_00000000009e7590, L_00000000009ead20, v0000000000873560_0, C4<0>;
+L_0000000000873a70 .functor AND 1, L_0000000000873920, L_0000000000873990, L_0000000000873a00, C4<1>;
+v00000000009ec9b0_0 .net "a_out1", 0 0, L_0000000000873a70;  1 drivers
+v00000000009e7f00_0 .var "input1", 0 0;
+v00000000009ece10_0 .var "input2", 0 0;
+v0000000000873560_0 .var "input3", 0 0;
+v0000000000873600_0 .net "n_out1", 0 0, L_00000000009e7590;  1 drivers
+v00000000008736a0_0 .net "n_out2", 0 0, L_00000000009ead20;  1 drivers
+v0000000000873740_0 .net "n_out3", 0 0, L_00000000009eae40;  1 drivers
+v00000000008737e0_0 .net "o_out1", 0 0, L_0000000000873920;  1 drivers
+v0000000000873880_0 .net "o_out2", 0 0, L_0000000000873990;  1 drivers
+v00000000008bac40_0 .net "o_out3", 0 0, L_0000000000873a00;  1 drivers
+    .scope S_00000000009ecc80;
+T_0 ;
+    %vpi_call 2 42 "$display", "A B C | Y" {0 0 0};
+    %vpi_call 2 43 "$display", "-------" {0 0 0};
+    %vpi_call 2 45 "$monitor", "%b %b %b | %b", v00000000009e7f00_0, v00000000009ece10_0, v0000000000873560_0, v00000000009ec9b0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009e7f00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000000009ece10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000000873560_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 60 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000000009ecc80;
+T_1 ;
+    %vpi_call 2 66 "$dumpfile", "Tabla_01_tb.vcd" {0 0 0};
+    %vpi_call 2 67 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000000009ecc80 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Tabla_01.v";
